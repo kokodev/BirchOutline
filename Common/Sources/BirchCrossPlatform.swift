@@ -53,7 +53,7 @@ import Foundation
     //public typealias Color = NSColor
 
     extension ChangeKind {
-        public init?(changeKind: NSDocumentChangeType) {
+        public init?(changeKind: NSDocument.ChangeType) {
             switch changeKind {
             case .changeDone:
                 self = .done
@@ -71,7 +71,7 @@ import Foundation
             }
         }
         
-        public func toCocoaChangeKind() -> NSDocumentChangeType {
+        public func toCocoaChangeKind() -> NSDocument.ChangeType {
             switch self {
             case .done:
                 return .changeDone

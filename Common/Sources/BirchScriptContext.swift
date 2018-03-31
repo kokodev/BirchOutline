@@ -74,7 +74,7 @@ open class BirchScriptContext {
 func setExceptionHandler(_ context: JSContext) {
     context.exceptionHandler = { context, exception in
         let message = NSLocalizedString("Uncaught JavaScript Exception", tableName: "JavascriptException", comment: "message text")
-        let informativeText = NSLocalizedString("\(exception)\n\n\(exception!.forProperty("stack"))", tableName: "JavascriptException", comment: "informative text")        
+        let informativeText = NSLocalizedString("\(String(describing: exception))\n\n\(exception!.forProperty("stack"))", tableName: "JavascriptException", comment: "informative text")        
         cpAlert(message, informativeText: informativeText)
         exit(EXIT_SUCCESS)
     }
@@ -98,6 +98,6 @@ func setTimeoutAndClearTimeoutHandlers(_ context: JSContext) {
         setTimeOutIDsToCallbacks.removeValue(forKey: timeoutID.toInt32())
     }
 
-    context.setObject(unsafeBitCast(setTimeout, to: AnyObject.self), forKeyedSubscript: "setTimeout" as (NSCopying & NSObjectProtocol)!)
-    context.setObject(unsafeBitCast(clearTimeout, to: AnyObject.self), forKeyedSubscript: "clearTimeout" as (NSCopying & NSObjectProtocol)!)
+    context.setObject(unsafeBitCast(setTimeout, to: AnyObject.self), forKeyedSubscript: "setTimeout" as (NSCopying & NSObjectProtocol)?)
+    context.setObject(unsafeBitCast(clearTimeout, to: AnyObject.self), forKeyedSubscript: "clearTimeout" as (NSCopying & NSObjectProtocol)?)
 }
