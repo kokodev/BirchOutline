@@ -10,7 +10,7 @@ open class BirchOutline {
 
     static var _sharedContext: BirchScriptContext!
     
-    open static var sharedContext: BirchScriptContext {
+    public static var sharedContext: BirchScriptContext {
         set {
             _sharedContext = newValue
         }
@@ -24,11 +24,11 @@ open class BirchOutline {
         }
     }
 
-    open static func createOutline(_ type: String?, content: String?) -> OutlineType {
+    public static func createOutline(_ type: String?, content: String?) -> OutlineType {
         return sharedContext.createOutline(type, content: content)
     }
     
-    open static func createTaskPaperOutline(_ content: String?) -> OutlineType {
+    public static func createTaskPaperOutline(_ content: String?) -> OutlineType {
         return sharedContext.createTaskPaperOutline(content)
     }
     

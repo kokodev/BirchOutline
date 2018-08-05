@@ -408,7 +408,7 @@
 					};
 					436C0DB11D1D63630089FA7A = {
 						CreatedOnToolsVersion = 7.3.1;
-						LastSwiftMigration = 0930;
+						LastSwiftMigration = 1000;
 					};
 					436C0DBA1D1D63630089FA7A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -764,7 +764,7 @@
 				PRODUCT_NAME = BirchOutline;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -786,7 +786,7 @@
 				PRODUCT_NAME = BirchOutline;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

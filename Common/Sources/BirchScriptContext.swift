@@ -74,7 +74,7 @@ open class BirchScriptContext {
 func setExceptionHandler(_ context: JSContext) {
     context.exceptionHandler = { context, exception in
         let message = NSLocalizedString("Uncaught JavaScript Exception", tableName: "JavascriptException", comment: "message text")
-        let informativeText = NSLocalizedString("\(String(describing: exception))\n\n\(exception!.forProperty("stack"))", tableName: "JavascriptException", comment: "informative text")        
+        let informativeText = NSLocalizedString("\(String(describing: exception))\n\n\(String(describing: exception!.forProperty("stack")))", tableName: "JavascriptException", comment: "informative text")        
         cpAlert(message, informativeText: informativeText)
         exit(EXIT_SUCCESS)
     }
